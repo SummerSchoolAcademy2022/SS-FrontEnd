@@ -1,0 +1,209 @@
+ .container {
+  display: flex;
+  margin-bottom: 0px;
+  flex-direction: row;
+}
+
+ .container li {
+  color: var(--dark-343a40);
+  text-align: left;
+  font: normal normal normal 16px/18px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #343a40;
+  opacity: 1;
+  list-style: none;
+  margin: 1rem;
+}
+
+.boxAccount,.boxBasket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--dark-343a40);
+  text-align: left;
+  font: normal normal normal 16px/18px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #343a40;
+  opacity: 1;
+  margin-right: 18px;
+  margin-left: 18px;
+}
+.gelatoLogo {
+  width: 120px;
+  height: 75px;
+}
+.navbarContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-bottom: 8px;
+    
+}
+.rightContainer {
+    display: flex;
+    flex-direction: row;
+}
+.leftContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.tabletView{
+  display:none;
+}
+
+
+@media (max-width:500px){
+  .container{
+    display:none;
+  }
+  .boxAccount{
+    display:none;
+  }
+  .tabletView{
+    display:flex;
+  }
+  #contentNav ul{
+    margin-right: 50px;
+  }
+ 
+}
+
+
+@media(min-width:500px) and (max-width:876px){
+  .container{
+    display:none;
+  }
+  .tabletView{
+    display:flex;
+  }
+  .leftContainer{
+    margin-left:100px;
+  }
+  #basketNav{
+    display:none;
+  }
+  #accountNav{
+    display:none;
+  }
+  #contentNav ul{
+    border:0px;
+  }
+}
+
+
+
+
+.item{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right:5px;
+  
+}
+
+.burgerMenu{
+  left:0px;
+  top:0px;
+  height: 130vh;
+  z-index: 2;
+  position:absolute;
+  background-color: #fff;
+  color:black;
+  display:flex;
+  border:1px solid #E2E6EA;
+  width: 319px;
+  flex-direction: column;
+ 
+}
+
+.menu{
+  display:flex;
+  justify-content: center;
+  border-bottom:2px solid #E2E6EA;
+ margin-left: 17px;
+ margin-right:17px;
+ width:275px;
+ padding-bottom: 15px;
+ letter-spacing: -1.5px;
+ color: #343A40;
+}
+
+.content ul{
+  list-style-type: none;
+  margin-top: 40px;
+  margin-left: 5px ;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding:0;
+  padding-bottom: 50px;
+  margin-left: 18px;
+  gap:30px;
+  border-bottom: 2px solid #E2E6EA;
+  
+}
+.content ul li{
+  font-weight:900;
+  letter-spacing:-1px;
+  font-size: 18px;
+  color: #343A40;
+}
+.closeButton{
+  display:flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-right: 20px;
+  margin-top:15px;
+}
+
+
+.account {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #E2E6EA;
+  width: 251px;
+  margin-left: 17px;
+  letter-spacing:-1px;
+  padding-top:-30px;
+  margin-top:-20px;
+  color: #343A40;
+}
+
+.basket{
+  display:flex;
+  flex-direction: row;
+  gap:20px;
+  font-size:20px;
+  font-weight: 700;
+  width: 251px;
+  margin-left:17px;
+  margin-top:40px;
+  letter-spacing: -1px;
+  color: #343A40;
+}
+
+
+
+#accountNav{
+  margin-top:30px;
+}
+.darken{
+   width:1000px;
+   height: 1000px;
+  background-color: black;
+  position:absolute;
+  z-index:3;
+  opacity:0.3;
+ margin-left:100%;
+ margin-bottom:30px;
+ top:-10px;
+}
