@@ -5,6 +5,7 @@ import DonutsForSpecialNeeds from "../DonutsForSpecialNeeds";
 import Gelato from "../Gelato";
 import GelatoForSpecialNeeds from "../GelatoForSpecialNeeds";
 import Navigation from "../../components/NavigationBar/NavigationBar";
+import Footer from "../../components/Footer/Footer";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           ></Route>
         </Routes>
         {/* <Home /> */}
-        {/* Footer */}
+        <Footer />
       </div>
     </Router>
   );
