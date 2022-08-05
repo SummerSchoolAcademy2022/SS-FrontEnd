@@ -1,6 +1,7 @@
 import "./style.css";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import useScreenSize from "../../hooks/useScreenSize";
 
 export default function Footer() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,19 +10,11 @@ export default function Footer() {
     setIsOpen(!isOpen);
   };
 
-  const [isMobile, setIsMobile] = useState(null);
-
-  const checkIsMobile = () => {
-    setIsMobile(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", checkIsMobile);
-  }, []);
+  const screenSize = useScreenSize();
 
   return (
     <footer>
-      <div>Is Mobile: {isMobile}</div>
+      <div>Is Mobile: {screenSize}</div>
       <div className="row">
         <div className="column newsletter-column">
           <h2>NEWSLETTER</h2>
@@ -37,7 +30,7 @@ export default function Footer() {
         </div>
 
         <div className="column">
-          <div class="footer-title" onClick={onExpandFooterMenu}>
+          <div className="footer-title" onClick={onExpandFooterMenu}>
             <h2>USEFUL INFO</h2>
 
             <div className="arrow-icon">
@@ -46,7 +39,7 @@ export default function Footer() {
           </div>
 
           {isOpen && (
-            <div class="paragraphs" style={{ maxHeight: "1000px" }}>
+            <div className="paragraphs" style={{ maxHeight: "1000px" }}>
               <ul>
                 <li>
                   <a
@@ -99,7 +92,7 @@ export default function Footer() {
           </div>
 
           {isOpen && (
-            <div class="paragraphs" style={{ maxHeight: "1000px" }}>
+            <div className="paragraphs" style={{ maxHeight: "1000px" }}>
               <ul>
                 <li>
                   <a href="https://ro.deloittedigital.com/" target="_blank">
@@ -127,16 +120,16 @@ export default function Footer() {
         </div>
 
         <div className="column">
-          <div class="footer-title" onClick={onExpandFooterMenu}>
+          <div className="footer-title" onClick={onExpandFooterMenu}>
             <h2>ABOUT GELATO & DONUTS</h2>
 
-            <div class="arrow-icon">
+            <div className="arrow-icon">
               {isOpen ? <FaChevronUp /> : <FaChevronDown />}
             </div>
           </div>
 
           {isOpen && (
-            <div class="paragraphs" style={{ maxHeight: "1000px" }}>
+            <div className="paragraphs" style={{ maxHeight: "1000px" }}>
               <ul>
                 <li>
                   <a href="https://ro.deloittedigital.com/" target="_blank">
