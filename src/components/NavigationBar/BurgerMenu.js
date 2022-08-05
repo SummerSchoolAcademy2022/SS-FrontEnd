@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import '../../containers/App/style.css'
 import { useState } from 'react';
 const BurgerMenu = () =>{
@@ -32,23 +32,23 @@ const BurgerMenu = () =>{
       <div className="content" id='contentNav'>
         <ul>
           <li>
-            HOME
+          <Link to="/" className="links">HOME</Link>
           </li>
           
           <li>
-            GELATO
+          <Link to="/gelato" className="links">GELATO</Link>
           </li>
           
           <li>
-            GELATO FOR SPECIAL NEEDS
+          <Link to="/gelatoforspecialneeds" className="links">GELATO FOR SPECIAL NEEDS</Link>
           </li>
           
           <li>
-            DONUTS
+          <Link to="/donuts" className="links">DONUTS</Link>
           </li>
           
           <li>
-            DONUTS FOR SPECIAL NEEDS
+          <Link to="/donutsforspecialneeds" className="links">DONUTS FOR SPECIAL NEEDS</Link>
           </li>
         
         </ul>
