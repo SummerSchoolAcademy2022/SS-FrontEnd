@@ -4,14 +4,12 @@ import Donuts from "../Donuts";
 import DonutsForSpecialNeeds from "../DonutsForSpecialNeeds";
 import Gelato from "../Gelato";
 import GelatoForSpecialNeeds from "../GelatoForSpecialNeeds";
-import Navigation from "../../components/NavigationBar/NavigationBar";
-
+import Navbar from "../../components/NavigationBar/NavigationBar";
 function App() {
   return (
     <Router>
-      <div className="App-container">
-        {/* NavigationBar */}
-        <Navigation />
+    <div className="App-container">
+        <Navbar/>
         {/* Routing for all pages */}
         <Routes>
           <Route path="/" element={<Home />}></Route>
