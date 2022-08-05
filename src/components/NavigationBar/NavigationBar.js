@@ -1,4 +1,4 @@
-import MobileNavbar from "./MobileNavbar";
+
 import BurgerMenu from './BurgerMenu'
 function Navbar() {
     return (
@@ -31,7 +31,15 @@ function Navbar() {
           </div>
   
           <div className="boxBasket">
-            <img src={require("../../assets/basket.png")} alt = 'Basket'/> Basket
+            <div className="iconNormal">
+            <img src={require("../../assets/basket.png")} alt = 'Basket'/> 
+            
+            </div>
+            <div className="iconHover">
+              <img src={require('../../assets/basketHover.png')} alt="" />
+              
+            </div>
+           Basket
           </div>
         </div>
       </div>

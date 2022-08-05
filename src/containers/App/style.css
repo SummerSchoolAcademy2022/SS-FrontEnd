@@ -109,7 +109,8 @@
 .burgerMenu{
   left:0px;
   top:0px;
-  height: 130vh;
+  height: 100vh;
+  background: no-repeat;
   z-index: 2;
   position:absolute;
   background-color: #fff;
@@ -118,7 +119,8 @@
   border:1px solid #E2E6EA;
   width: 319px;
   flex-direction: column;
- 
+   animation-name:popIn;
+   animation-duration:0.5s;
 }
 
 .menu{
@@ -208,3 +210,30 @@
  top:-10px;
 }
 
+.iconHover{
+  display:none;
+}
+.boxAccount:hover .iconHover{
+  display:block;
+}
+.boxAccount:hover .iconNormal{
+  display:none;
+}
+
+.boxAccount:hover{
+  color: #0069D9;
+}
+.boxBasket:hover .iconHover{
+  display:block;
+}
+.boxBasket:hover .iconNormal{
+  display:none;
+}
+.boxBasket:hover{
+  color: #0069D9;
+}
+
+@keyframes popIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
