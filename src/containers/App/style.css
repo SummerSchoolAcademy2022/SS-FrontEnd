@@ -1,0 +1,54 @@
+:root {
+/* colors */
+  --primary: #007BFF;
+  --primary-hover: #0069D9;
+  --primary-disabled: #58AAFF;
+  --secondary: #6c757d;
+  --secondary-hover: #5a6268;
+  --secondary-disable: #b0b6ba;
+  --light: #F8F9FA;
+  --light-hover: #E2E6EA;
+  --light-disable: #FAFCFC;
+  --dark: #343A40;
+  --dark-hover: #23272B;
+  --dark-disable: #7A7E83;
+  --universal-white: #fff;
+  --universal-black: #000;
+
+/* typography */
+  --font-family: Helvetica Neue;
+  --typo-1: 29px;
+  --typo-2: 24px;
+  --typo-3: 22px;
+  --typo-4: 19px;
+  --body-1: 20px;
+  --body-2: 16px;
+
+/* border radius */
+  --border-radius: 15px;
+
+/* border colors */
+  --border-primary: #72B0F2;
+};
+
+.default-button {
+  color: var(--universal-white);
+  background-color: var(--primary);
+  font-family: var(--font-family);
+  font-size: var(--body-1);
+  padding: 20px 25px;
+  border-radius: var(--border-radius);
+  margin-right: 30px;
+}
+
+.default-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.default-button:active {
+  margin: 10px solid var(--border-primary);
+}
+
+.default-button:disabled {
+  background-color: var(--primary-disabled);
+}
