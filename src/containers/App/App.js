@@ -4,6 +4,7 @@ import Donuts from "../Donuts";
 import DonutsForSpecialNeeds from "../DonutsForSpecialNeeds";
 import Gelato from "../Gelato";
 import GelatoForSpecialNeeds from "../GelatoForSpecialNeeds";
+import Navbar from "../../components/NavigationBar/NavigationBar";
 function App() {
   return (
     <Router>
