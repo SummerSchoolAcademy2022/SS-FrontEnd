@@ -21,7 +21,13 @@ function Navbar() {
         </div>
         <div className="rightContainer">
           <div className="boxAccount">
-            <img src={require("../../assets/account.png")} alt='account'/> Account
+            <div className="iconNormal">
+            <img src={require("../../assets/account.png")} alt='account'/> 
+            </div>
+            <div className="iconHover">
+              <img src={require('../../assets/accountHover.png')} alt="" />
+            </div>
+            Account
           </div>
   
           <div className="boxBasket">

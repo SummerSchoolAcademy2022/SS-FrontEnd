@@ -59,7 +59,9 @@ const BurgerMenu = () =>{
         Account
       </div>
       <div className="basket" id='basketNav'>
+       
         <img src={require("../../assets/basket.png")} alt="basket" />
+       
         Basket
       </div>
       <div className="darken"></div>
