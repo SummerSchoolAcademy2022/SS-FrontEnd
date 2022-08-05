@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BurgerMenu from './BurgerMenu'
+import '../../containers/App/style.css'
 function Navbar() {
     return (
       <>
@@ -15,19 +16,19 @@ function Navbar() {
         <ul className="container">
         
         <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="links">Home</Link>
           </li>
           <li>
-            <Link to="/donuts">Donuts</Link>
+            <Link to="/donuts" className="links">Donuts</Link>
           </li>
           <li>
-            <Link to="/donutsforspecialneeds">Donuts For Special Needs</Link>
+            <Link to="/donutsforspecialneeds" className="links">Donuts For Special Needs</Link>
           </li>
           <li>
-            <Link to="/gelato">Gelato</Link>
+            <Link to="/gelato" className="links">Gelato</Link>
           </li>
           <li>
-            <Link to="/gelatoforspecialneeds">Gelato For Special Needs</Link>
+            <Link to="/gelatoforspecialneeds" className="links">Gelato For Special Needs</Link>
           </li>
         </ul>
         </div>

@@ -13,6 +13,10 @@
   opacity: 1;
   list-style: none;
   margin: 1rem;
+  text-decoration:none;
+}
+.container ul li Link{
+  text-decoration: none;
 }
 
 .boxAccount,.boxBasket {
@@ -154,6 +158,7 @@
   letter-spacing:-1px;
   font-size: 18px;
   color: #343A40;
+
 }
 .closeButton{
   display:flex;
@@ -236,4 +241,15 @@
 @keyframes popIn{
   from{opacity:0;}
   to{opacity:1;}
+}
+
+
+.links{
+  text-decoration: none;
+  color:#343A40;
+  letter-spacing:-0.5px;
+}
+
+.links:hover{
+  color:#0069D9;
 }
