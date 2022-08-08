@@ -53,6 +53,9 @@ const Product = () => {
      <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className="reverse"/>
  
      </div>
+     <div className="imgshowcaseDesktop">
+        
+     </div>
   
   <div className="about">
   <div className="name">{produs.name}</div>
@@ -105,6 +108,7 @@ const Product = () => {
     </div>
     </div>
     </div>
+
   </>
 };
 
