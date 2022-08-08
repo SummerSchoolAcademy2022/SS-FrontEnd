@@ -1,7 +1,4 @@
- .App-container{
- width:100vw;
- height: 100v;
- }
+
  .container {
   display: flex;
   margin-bottom: 0px;
@@ -420,7 +417,7 @@ display:flex;
 .otherimages{
   display: flex;
   flex-direction: column;
-  gap:5px;
+  gap:19px;
   margin-left: 17px;
 }
 
@@ -442,6 +439,8 @@ display:flex;
 }
 .imgshowcase{
   display:flex;
+  width: 95vw;
+  margin-left:0;
 }
 
 }
@@ -460,13 +459,14 @@ display:flex;
   flex-direction: column;
   width: 291px;
   height: 535px;
-  justify-content:flex-start;
-  align-items: flex-start;
-   flex-wrap: nowrap;
+  justify-content:center;
+  align-items: center;
+  margin-top:-40px;
+   
 }
 .imgshowcase{
   width: 380px;
-  height: 372px;
+  height: 535px;
  
 }
 .contents{
