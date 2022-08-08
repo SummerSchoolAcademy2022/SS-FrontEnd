@@ -1,0 +1,160 @@
+/* Footer desktop*/
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  footer {
+    min-width: 600px;
+  }
+  
+  .row {
+    background-color: #343a40;
+    color: white;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .column {
+    padding: 10px;
+    margin-top: 2em;
+  }
+  
+  .newsletter-column {
+    order: 4;
+  }
+  
+  .row div h2 {
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  footer p,
+  footer a {
+    font-family: sans-serif;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  #buttons {
+    display: flex;
+    flex-wrap: wrap;
+    height: 2.5em;
+    text-size-adjust: 80%;
+  }
+  
+  #buton-text,
+  #subscribe {
+    max-width: 100%;
+    border-radius: 5px;
+    border: none;
+    margin: 1px;
+  }
+  
+  #subscribe:hover {
+    background-color: #7a7e83;
+    color: white;
+    border: none;
+  }
+  
+  #tm {
+    text-align: center;
+    color: #6b6d70;
+    padding: 2em;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .arrow-icon i {
+    font-size: 24px;
+  }
+  
+  .arrow-icon {
+    display: none;
+  }
+  
+  .paragraphs a {
+    display: block;
+  }
+  
+  .paragraphs li {
+    margin: 15px 0;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .newsletter-column {
+      order: -1;
+      width: 100%;
+      background-color: #0069d9;
+      text-align: center;
+      align-items: center;
+    }
+  
+    #buttons {
+      width: auto;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+  
+    #buton-text {
+      text-align: center;
+      justify-content: center;
+    }
+  
+    .row {
+      padding: 0;
+    }
+  
+    .newsletter-column {
+      margin-top: 0;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      margin-top: 0;
+      border-top: 1px solid white;
+    }
+  
+    .arrow-icon {
+      display: block;
+    }
+  
+    .paragraphs {
+      /* overflow: hidden; */
+      max-height: 0px;
+      transition: 0.5s ease-out;
+    }
+  
+    .showParagraphInfo {
+      max-height: 1000px !important;
+      transition: 1s ease-in;
+    }
+  }
