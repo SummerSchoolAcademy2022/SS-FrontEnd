@@ -1,4 +1,6 @@
-
+*{
+  border: 1px solid red !important;
+}
  .container {
   display: flex;
   margin-bottom: 0px;
@@ -442,6 +444,17 @@ display:flex;
   width: 95vw;
   margin-left:0;
 }
+.similarDonuts{
+  margin:0;
+}
+.similarDonuts h1 {
+  margin-left:14px;
+  margin-top: 30px;
+  font-size:24px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+}
 
 }
 
@@ -479,6 +492,7 @@ display:flex;
 .addBasket{
   width:125px;
 }
+
 .arrows{
   width: 541px;
   height: 530px;
@@ -487,11 +501,17 @@ display:flex;
   align-items: center;
   
 }
+.quantityAndBasket{
+  width:270px;
+}
 .imgshowcaseDesktop{
   display:none;
 }
 .imgshowcase{
   display:flex;
+}
+.description{
+  width: 270px;
 }
 
 }

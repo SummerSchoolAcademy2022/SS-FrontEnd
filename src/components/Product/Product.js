@@ -28,6 +28,12 @@ const Product = () => {
          Spirulina Extract, Skim Milk, Eggs.`,
     alergens: 'Milk, egg, soy, wheat'
    }
+   const produs2 = {
+    name:'Cocoa Donuts',
+    description: `Treat yourself to ice cream infused with smooth Bourbon sprinkled...`,
+    price:250,
+    img:require('../../assets/donutsimilar.png')
+   }
 
  
   return <>
@@ -40,11 +46,11 @@ const Product = () => {
   </div>
   <div className="mobileTablet">
     <div className="otherimages">
-        <img src={require('../../assets/donut1.png')} className="images"></img>
-        <img src={require('../../assets/donut2.png')} className="images"></img>
-        <img src={require('../../assets/donut3.png')} className="images"></img>
-        <img src={require('../../assets/donut4.png')} className="images"></img>
-        <img src={require('../../assets/donut5.png')} className="images"></img>
+        <img src={require('../../assets/donut1.png')} className="images" alt='donut'></img>
+        <img src={require('../../assets/donut2.png')} className="images" alt='donut'></img>
+        <img src={require('../../assets/donut3.png')} className="images" alt='donut'></img>
+        <img src={require('../../assets/donut4.png')} className="images" alt='donut'></img>
+        <img src={require('../../assets/donut5.png')} className="images" alt='donut'></img>
     </div>
   
      <div className="imgshowcase">
@@ -65,7 +71,7 @@ const Product = () => {
         <img src={require('../../assets/steaPlina.png')} alt="star" />
         <img src={require('../../assets/steaPlina.png')} alt="star" />
         <img src={require('../../assets/steaPlina.png')} alt="star" />
-        <img src={require('../../assets/steaGoala.png')} alt="star" />
+        <img src={require('../../assets/steaGoala.png')} alt="empty star" />
     </div>
     <div className="review">
         {produs.numberReviews} REVIEWS
@@ -108,7 +114,15 @@ const Product = () => {
     </div>
     </div>
     </div>
-
+   <div className="similarDonuts">
+    <h1>Similar Donuts</h1>
+    <div className="similarDonut">
+        <img src={produs2.img} alt="donut" />
+        <div className="informations">
+            
+        </div>
+    </div>
+   </div>
   </>
 };
 
