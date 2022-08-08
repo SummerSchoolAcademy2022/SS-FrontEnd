@@ -5,11 +5,13 @@ import DonutsForSpecialNeeds from "../DonutsForSpecialNeeds";
 import Gelato from "../Gelato";
 import GelatoForSpecialNeeds from "../GelatoForSpecialNeeds";
 import Navbar from "../../components/NavigationBar/NavigationBar";
+import Footer from "../../components/Footer/Footer";
+
 function App() {
   return (
     <Router>
-    <div className="App-container">
-        <Navbar/>
+      <div className="App-container">
+        <Navbar />
         {/* Routing for all pages */}
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -25,7 +27,7 @@ function App() {
           ></Route>
         </Routes>
         {/* <Home /> */}
-        {/* Footer */}
+        <Footer />
       </div>
     </Router>
   );
