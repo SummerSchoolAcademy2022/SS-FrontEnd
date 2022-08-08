@@ -1,20 +1,40 @@
 import "./style.css";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useScreenSize from "../../hooks/useScreenSize";
 
 export default function Footer() {
-  const [isOpen, setIsOpen] = useState(false);
-  // console.log(isOpen);
-  const onExpandFooterMenu = () => {
-    setIsOpen(!isOpen);
+  const [isOpenUseful, setIsOpenUseful] = useState(false);
+  const [isOpenFind, setIsOpenFind] = useState(false);
+  const [isOpenAbout, setIsOpenAbout] = useState(false);
+
+  const onExpandUseful = () => {
+    setIsOpenUseful(!isOpenUseful);
+  };
+  const onExpandFind = () => {
+    setIsOpenFind(!isOpenFind);
+  };
+  const onExpandAbout = () => {
+    setIsOpenAbout(!isOpenAbout);
   };
 
-  const screenSize = useScreenSize();
+  const screenSize = useScreenSize(true);
+
+  useEffect(() => {
+    if (screenSize !== "mobile") {
+      setIsOpenUseful(true);
+      setIsOpenFind(true);
+      setIsOpenAbout(true);
+    } else {
+      setIsOpenUseful(false);
+      setIsOpenFind(false);
+      setIsOpenAbout(false);
+    }
+  }, [screenSize]);
 
   return (
     <footer>
-      <div>Is Mobile: {screenSize}</div>
+      {/* <div>Is Mobile: {screenSize}</div> */}
       <div className="row">
         <div className="column newsletter-column">
           <h2>NEWSLETTER</h2>
@@ -30,15 +50,15 @@ export default function Footer() {
         </div>
 
         <div className="column">
-          <div className="footer-title" onClick={onExpandFooterMenu}>
+          <div className="footer-title" onClick={onExpandUseful}>
             <h2>USEFUL INFO</h2>
 
             <div className="arrow-icon">
-              {isOpen ? <FaChevronUp /> : <FaChevronDown />}
+              {isOpenUseful ? <FaChevronUp /> : <FaChevronDown />}
             </div>
           </div>
 
-          {isOpen && (
+          {isOpenUseful && (
             <div className="paragraphs" style={{ maxHeight: "1000px" }}>
               <ul>
                 <li>
@@ -83,34 +103,50 @@ export default function Footer() {
         </div>
 
         <div className="column">
-          <div className="footer-title" onClick={onExpandFooterMenu}>
+          <div className="footer-title" onClick={onExpandFind}>
             <h2>YOU CAN FIND US IN</h2>
 
             <div className="arrow-icon">
-              {isOpen ? <FaChevronUp /> : <FaChevronDown />}
+              {isOpenFind ? <FaChevronUp /> : <FaChevronDown />}
             </div>
           </div>
 
-          {isOpen && (
+          {isOpenFind && (
             <div className="paragraphs" style={{ maxHeight: "1000px" }}>
               <ul>
                 <li>
-                  <a href="https://ro.deloittedigital.com/" target="_blank">
+                  <a
+                    href="https://ro.deloittedigital.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     London, UK
                   </a>
                 </li>
                 <li>
-                  <a href="https://ro.deloittedigital.com/" target="_blank">
+                  <a
+                    href="https://ro.deloittedigital.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Bucharest, RO
                   </a>
                 </li>
                 <li>
-                  <a href="https://ro.deloittedigital.com/" target="_blank">
+                  <a
+                    href="https://ro.deloittedigital.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Paris, FR
                   </a>
                 </li>
                 <li>
-                  <a href="https://ro.deloittedigital.com/" target="_blank">
+                  <a
+                    href="https://ro.deloittedigital.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Sofia, BG
                   </a>
                 </li>
@@ -120,39 +156,59 @@ export default function Footer() {
         </div>
 
         <div className="column">
-          <div className="footer-title" onClick={onExpandFooterMenu}>
+          <div className="footer-title" onClick={onExpandAbout}>
             <h2>ABOUT GELATO & DONUTS</h2>
 
             <div className="arrow-icon">
-              {isOpen ? <FaChevronUp /> : <FaChevronDown />}
+              {isOpenAbout ? <FaChevronUp /> : <FaChevronDown />}
             </div>
           </div>
 
-          {isOpen && (
+          {isOpenAbout && (
             <div className="paragraphs" style={{ maxHeight: "1000px" }}>
               <ul>
                 <li>
-                  <a href="https://ro.deloittedigital.com/" target="_blank">
+                  <a
+                    href="https://ro.deloittedigital.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     About us
                   </a>
                 </li>
                 <li>
-                  <a href="https://ro.deloittedigital.com/" target="_blank">
+                  <a
+                    href="https://ro.deloittedigital.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Store locator
                   </a>
                 </li>
                 <li>
-                  <a href="https://ro.deloittedigital.com/" target="_blank">
+                  <a
+                    href="https://ro.deloittedigital.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Franchise
                   </a>
                 </li>
                 <li>
-                  <a href="https://ro.deloittedigital.com/" target="_blank">
+                  <a
+                    href="https://ro.deloittedigital.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Careers
                   </a>
                 </li>
                 <li>
-                  <a href="https://ro.deloittedigital.com/" target="_blank">
+                  <a
+                    href="https://ro.deloittedigital.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Contact us
                   </a>
                 </li>

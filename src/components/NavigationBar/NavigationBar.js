@@ -1,62 +1,72 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BurgerMenu from './BurgerMenu'
-import '../../containers/App/style.css'
+import BurgerMenu from "./BurgerMenu";
+import "../../containers/App/style.css";
 function Navbar() {
-    return (
-      <>
-
-      
+  return (
+    <>
       <div className="navbarContainer">
         <div className="tabletView">
-          <BurgerMenu/>
+          <BurgerMenu />
         </div>
         <div className="leftContainer">
-        <img className="gelatoLogo" src={require("../../assets/logo.png")} alt='Logo'/>{" "}
-        <ul className="container">
-        
-        <li>
+          <Link to="/" className="links">
+            <img
+              className="gelatoLogo"
+              src={require("../../assets/logo.png")}
+              alt="Logo"
+            />
+          </Link>
+          <ul className="container">
+            {/* We do not have Home page on Desktop, for Home we will use the logo and Gelato & Donuts. */}
+            {/* <li>
             <Link to="/" className="links">Home</Link>
-          </li>
-          <li>
-            <Link to="/donuts" className="links">Donuts</Link>
-          </li>
-          <li>
-            <Link to="/donutsforspecialneeds" className="links">Donuts For Special Needs</Link>
-          </li>
-          <li>
-            <Link to="/gelato" className="links">Gelato</Link>
-          </li>
-          <li>
-            <Link to="/gelatoforspecialneeds" className="links">Gelato For Special Needs</Link>
-          </li>
-        </ul>
+          </li> */}
+            <li>
+              <Link to="/donuts" className="links">
+                Donuts
+              </Link>
+            </li>
+            <li>
+              <Link to="/donutsforspecialneeds" className="links">
+                Donuts For Special Needs
+              </Link>
+            </li>
+            <li>
+              <Link to="/gelato" className="links">
+                Gelato
+              </Link>
+            </li>
+            <li>
+              <Link to="/gelatoforspecialneeds" className="links">
+                Gelato For Special Needs
+              </Link>
+            </li>
+          </ul>
         </div>
         <div className="rightContainer">
           <div className="boxAccount">
             <div className="iconNormal">
-            <img src={require("../../assets/account.png")} alt='account'/> 
+              <img src={require("../../assets/account.png")} alt="account" />
             </div>
             <div className="iconHover">
-              <img src={require('../../assets/accountHover.png')} alt="" />
+              <img src={require("../../assets/accountHover.png")} alt="" />
             </div>
             Account
           </div>
-  
+
           <div className="boxBasket">
             <div className="iconNormal">
-            <img src={require("../../assets/basket.png")} alt = 'Basket'/> 
-            
+              <img src={require("../../assets/basket.png")} alt="Basket" />
             </div>
             <div className="iconHover">
-              <img src={require('../../assets/basketHover.png')} alt="" />
-              
+              <img src={require("../../assets/basketHover.png")} alt="" />
             </div>
-           Basket
+            Basket
           </div>
         </div>
       </div>
-      </>
-    );
-  }
-  export default Navbar
+    </>
+  );
+}
+export default Navbar;
