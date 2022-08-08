@@ -114,15 +114,8 @@ const Product = () => {
     </div>
     </div>
     </div>
-   <div className="similarDonuts">
-    <h1>Similar Donuts</h1>
-    <div className="similarDonut">
-        <img src={produs2.img} alt="donut" />
-        <div className="informations">
-            
-        </div>
-    </div>
-   </div>
+   
+   
   </>
 };
 
