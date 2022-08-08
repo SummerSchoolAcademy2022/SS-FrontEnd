@@ -4,6 +4,7 @@ import Donuts from "../Donuts";
 import DonutsForSpecialNeeds from "../DonutsForSpecialNeeds";
 import Gelato from "../Gelato";
 import GelatoForSpecialNeeds from "../GelatoForSpecialNeeds";
+import Product from '../../components/Product/Product'
 import Navbar from "../../components/NavigationBar/NavigationBar";
 import Footer from "../../components/Footer/Footer";
 
@@ -24,6 +25,10 @@ function App() {
           <Route
             path="/gelatoforspecialneeds"
             element={<GelatoForSpecialNeeds />}
+          ></Route>
+          <Route 
+          path="/product" 
+          element = {<Product/>}
           ></Route>
         </Routes>
         {/* <Home /> */}
