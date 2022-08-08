@@ -1,5 +1,6 @@
  .App-container{
-  overflow-x: none;
+ width:100vw;
+ height: 100v;
  }
  .container {
   display: flex;
@@ -278,7 +279,7 @@
 
 .imgshowcase{
   background: url('../../assets/imgshowcase.png');
-  width: 541px;
+  width: 380px;
   height: 530px;
   background-repeat:  no-repeat;
   background-size:cover;
@@ -422,9 +423,7 @@ display:flex;
   gap:5px;
   margin-left: 17px;
 }
-.arrows{
-display:none;
-}
+
 
 @media (max-width:500px){
 .mobileTablet{
@@ -437,14 +436,8 @@ display:none;
 .otherimages{
   display:none;
 }
-.arrows{
-  width: 541px;
-  height: 530px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-}
+
+
 }
 
 @media(min-width:501px) and (max-width:879px){
@@ -466,9 +459,9 @@ display:none;
    flex-wrap: nowrap;
 }
 .imgshowcase{
-  width: 541px;
+  width: 400px;
   height: 530px;
-  margin:0;
+ 
 }
 .contents{
   width: 200px;

@@ -48,10 +48,10 @@ const Product = () => {
     </div>
   
      <div className="imgshowcase">
-        <div className="arrows">
+        
      <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className='normal' />
      <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className="reverse"/>
-     </div>
+ 
      </div>
   
   <div className="about">
