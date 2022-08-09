@@ -18,7 +18,7 @@ const Product = () => {
 
    const produs = {
     name:"KINDER BUENO",
-    price:200,
+    price:"2.00",
     description:`Donut with white chocolate icing, 
     dark chocolate curls, Kinder Bueno ™ 
     wafers and delicate milk chocolate lines.`,
@@ -28,12 +28,7 @@ const Product = () => {
          Spirulina Extract, Skim Milk, Eggs.`,
     alergens: 'Milk, egg, soy, wheat'
    }
-   const produs2 = {
-    name:'Cocoa Donuts',
-    description: `Treat yourself to ice cream infused with smooth Bourbon sprinkled...`,
-    price:250,
-    img:require('../../assets/donutsimilar.png')
-   }
+  
 
  
   return <>
@@ -79,7 +74,7 @@ const Product = () => {
     
   </div>
   <div className="price">
-        ${(produs.price-(produs.price%100)) / 100 }.{(produs.price%100)}
+        ${produs.price}
     </div>
     <div className="description">
         {produs.description}
