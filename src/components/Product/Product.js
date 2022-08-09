@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../../containers/App/style.css';
-import { useState } from 'react';
-import {FiFacebook} from 'react-icons/fi'
-import {AiOutlineInstagram} from 'react-icons/ai'
+import "../../containers/App/style.css";
+import { useState } from "react";
+import { FiFacebook } from "react-icons/fi";
+import { AiOutlineInstagram } from "react-icons/ai";
+import mockProducts from "./mockProducts";
+import { useLocation } from "react-router-dom";
+
+
+
 const Product = () => {
     const [counter, setCounter] = useState(0);
     
@@ -15,21 +20,30 @@ const Product = () => {
       if(counter > 0){
         setCounter(count => count -1); }
     };
+    const [imgIndex, setImgIndex] = useState(0);
 
-   const produs = {
-    name:"KINDER BUENO",
-    price:"2.00",
-    description:`Donut with white chocolate icing, 
-    dark chocolate curls, Kinder Bueno ™ 
-    wafers and delicate milk chocolate lines.`,
-    numberReviews:3190,
-    ingredients:`Cream, Milk, Cane Sugar, Cake Pieces, Cake Base, Sprinkles (Sugar, Coconut Oil
-        , Buttermilk Powder, Natural Flavor,
-         Spirulina Extract, Skim Milk, Eggs.`,
-    alergens: 'Milk, egg, soy, wheat'
-   }
+    const increaseIndex = () =>{
+     if(imgIndex === 4) {setImgIndex(0)}
+     else{setImgIndex(imgIndex => imgIndex + 1)}
+    }
+    
+    const decreaseIndex = () =>{
+     if(imgIndex === 0){setImgIndex(4)}
+     else{
+         setImgIndex(imgIndex => imgIndex + -1)
+     }
+    }
+
+    
+    const location = useLocation();
+    const splitPath = location?.pathname?.split("/");
+    const productId = splitPath[splitPath.length - 1];
+    const product = mockProducts.filter((prod) => prod.id === productId);
   
-
+    console.log("product", product)
+  
+  
+  
  
   return <>
   <div className="breadcrum">
@@ -80,38 +94,37 @@ const Product = () => {
         {produs.description}
     </div>
 
-    <div className="quantityAndBasket">
-        <div className="quantity">
-            <div className="box1" onClick={decreaseCounter} >
-                    <img src={require('../../assets/-.png')} alt="-" />
+          <div className="quantityAndBasket">
+            <div className="quantity">
+              <div className="box1" onClick={decreaseCounter}>
+                <img src={require("../../assets/-.png")} alt="-" />
+              </div>
+              <div className="box2">{counter}</div>
+              <div className="box3" onClick={increaseCounter}>
+                <img src={require("../../assets/+.png")} alt="+" />
+              </div>
             </div>
-            <div className="box2">{counter}</div>
-            <div className="box3" onClick={increaseCounter}>
-                <img src ={require('../../assets/+.png')} alt="+" />
+            <button className="addBasket">Add to basket</button>
+          </div>
+          <div className="ingredients">
+            <h1>INGREDIENTS:</h1>
+            {produs.ingredients}
+          </div>
+          <div className="alergens">
+            <h1>ALERGENS</h1>
+            {produs.alergens}
+          </div>
+          <div className="share">
+            <h1>SHARE WITH YOUR FRIENDS</h1>
+            <div className="socials">
+              <FiFacebook className="facebook" />
+              <AiOutlineInstagram className="instagram" />
             </div>
+          </div>
         </div>
-        <button className="addBasket" >Add to basket</button>
-    </div>
-    <div className="ingredients">
-        <h1>INGREDIENTS:</h1>
-        {produs.ingredients}
-    </div>
-    <div className="alergens">
-        <h1>ALERGENS</h1>
-        {produs.alergens}
-    </div>
-    <div className="share">
-        <h1>SHARE WITH YOUR FRIENDS</h1>
-        <div className="socials">
-        <FiFacebook className="facebook"/>
-        <AiOutlineInstagram className="instagram"/>
-        </div>
-    </div>
-    </div>
-    </div>
-   
-   
-  </>
+      </div>
+    </>
+  
 };
 
 export default Product;
