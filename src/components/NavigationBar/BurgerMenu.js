@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import "../../containers/App/style.css";
 import { useState } from "react";
+import Burger from "../../assets/burger.png";
+import Close from "../../assets/close.png";
+import Account from "../../assets/account.png";
+import Basket from "../../assets/basket.png";
+
 const BurgerMenu = () => {
   const [display, setState] = useState("none");
   const isClosed = () => {
@@ -21,14 +26,14 @@ const BurgerMenu = () => {
   return (
     <div className="cont">
       <img
-        src={require("../../assets/burger.png")}
+        src={Burger}
         alt="menu"
         onClick={isClosed}
       />
       <nav className="burgerMenu" style={{ display: display }}>
         <div className="closeButton">
           <img
-            src={require("../../assets/close.png")}
+            src={Close}
             alt="close"
             width="24"
             height="24"
@@ -83,11 +88,11 @@ const BurgerMenu = () => {
           </ul>
         </div>
         <div className="account" id="accountNav">
-          <img src={require("../../assets/account.png")} alt="account" />
+          <img src={Account} alt="account" />
           Account
         </div>
         <div className="basket" id="basketNav">
-          <img src={require("../../assets/basket.png")} alt="basket" />
+          <img src={Basket} alt="basket" />
           Basket
         </div>
         <div className="darken"></div>

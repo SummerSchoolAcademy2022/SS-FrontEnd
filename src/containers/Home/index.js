@@ -1,9 +1,9 @@
 import React from "react";
-import Carousel from "../../components/Carousel/Carousel";
+import ComponentCarousel from "../../components/Carousel/CreateCarousel";
 
 const Home = () => {
   return <div>Gelato & Donuts HOME Placeholder
-    <Carousel />
+    <ComponentCarousel />
   </div>;
 };
 

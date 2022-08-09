@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 import "../../containers/App/style.css";
+import Logo from "../../assets/logo.png";
+import Account from "../../assets/account.png";
+import AccountHover from "../../assets/accountHover.png";
+import Basket from "../../assets/basket.png";
+import BasketHover from "../../assets/basketHover.png";
 function Navbar() {
   return (
     <>
@@ -13,7 +18,7 @@ function Navbar() {
           <Link to="/" className="links">
             <img
               className="gelatoLogo"
-              src={require("../../assets/logo.png")}
+              src={Logo}
               alt="Logo"
             />
           </Link>
@@ -47,20 +52,20 @@ function Navbar() {
         <div className="rightContainer">
           <div className="boxAccount">
             <div className="iconNormal">
-              <img src={require("../../assets/account.png")} alt="account" />
+              <img src={Account} alt="account" />
             </div>
             <div className="iconHover">
-              <img src={require("../../assets/accountHover.png")} alt="" />
+              <img src={AccountHover} alt="" />
             </div>
             Account
           </div>
 
           <div className="boxBasket">
             <div className="iconNormal">
-              <img src={require("../../assets/basket.png")} alt="Basket" />
+              <img src={Basket} alt="Basket" />
             </div>
             <div className="iconHover">
-              <img src={require("../../assets/basketHover.png")} alt="" />
+              <img src={BasketHover} alt="" />
             </div>
             Basket
           </div>
