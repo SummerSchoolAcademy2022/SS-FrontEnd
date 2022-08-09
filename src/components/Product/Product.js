@@ -20,6 +20,8 @@ const Product = () => {
       if(counter > 0){
         setCounter(count => count -1); }
     };
+    
+    // ----------------------------------------
     const [imgIndex, setImgIndex] = useState(0);
 
     const increaseIndex = () =>{
@@ -34,7 +36,7 @@ const Product = () => {
      }
     }
 
-    
+
     const location = useLocation();
     const splitPath = location?.pathname?.split("/");
     const productId = splitPath[splitPath.length - 1];
@@ -42,7 +44,12 @@ const Product = () => {
   
     console.log("product", product)
   
-  
+  const donutimages = [
+  require('../../assets/donut1x2.png'),
+  require('../../assets/donut2x2.png'),
+  require('../../assets/donut3x2.png'),
+  require('../../assets/donut4x2.png'),
+  require('../../assets/donut5x2.png')]
   
  
   return <>
@@ -55,25 +62,25 @@ const Product = () => {
   </div>
   <div className="mobileTablet">
     <div className="otherimages">
-        <img src={require('../../assets/donut1.png')} className="images" alt='donut'></img>
-        <img src={require('../../assets/donut2.png')} className="images" alt='donut'></img>
-        <img src={require('../../assets/donut3.png')} className="images" alt='donut'></img>
-        <img src={require('../../assets/donut4.png')} className="images" alt='donut'></img>
-        <img src={require('../../assets/donut5.png')} className="images" alt='donut'></img>
+        <img src={require('../../assets/donut1.png')} className="images" alt='donut'onClick={()=>setImgIndex(0)}></img>
+        <img src={require('../../assets/donut2.png')} className="images" alt='donut'onClick={()=>setImgIndex(1)}></img>
+        <img src={require('../../assets/donut3.png')} className="images" alt='donut'onClick={()=>setImgIndex(2)}></img>
+        <img src={require('../../assets/donut4.png')} className="images" alt='donut'onClick={()=>setImgIndex(3)}></img>
+        <img src={require('../../assets/donut5.png')} className="images" alt='donut'onClick={()=>setImgIndex(4)}></img>
     </div>
   
      <div className="imgshowcase">
         
-     <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className='normal' />
-     <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className="reverse"/>
- 
+     <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className='normal' onClick={decreaseIndex}/>
+     <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className="reverse"onClick={increaseIndex}/>
+     {/* <img src={donutimages(imgIndex)} alt="donut" /> */}
      </div>
      <div className="imgshowcaseDesktop">
-        
+     <img src={donutimages[imgIndex]} alt="donut" />
      </div>
   
   <div className="about">
-  <div className="name">{produs.name}</div>
+  <div className="name"></div>
   <div className="ratingAndReviews">
     <div className="rating">
         <img src={require('../../assets/steaPlina.png')} alt="star" />
@@ -83,15 +90,15 @@ const Product = () => {
         <img src={require('../../assets/steaGoala.png')} alt="empty star" />
     </div>
     <div className="review">
-        {produs.numberReviews} REVIEWS
+         REVIEWS
     </div>
     
   </div>
   <div className="price">
-        ${produs.price}
+       
     </div>
     <div className="description">
-        {produs.description}
+       
     </div>
 
           <div className="quantityAndBasket">
@@ -108,11 +115,11 @@ const Product = () => {
           </div>
           <div className="ingredients">
             <h1>INGREDIENTS:</h1>
-            {produs.ingredients}
+            
           </div>
           <div className="alergens">
             <h1>ALERGENS</h1>
-            {produs.alergens}
+          
           </div>
           <div className="share">
             <h1>SHARE WITH YOUR FRIENDS</h1>
