@@ -21,6 +21,19 @@ const Product = () => {
         setCounter(count => count -1); }
     };
 
+    const [imgIndex, setImgIndex] = useState(0);
+
+   const increaseIndex = () =>{
+    if(imgIndex === 4) {setImgIndex(0)}
+    else{setImgIndex(imgIndex => imgIndex + 1)}
+   }
+   
+   const decreaseIndex = () =>{
+    if(imgIndex === 0){setImgIndex(4)}
+    else{
+        setImgIndex(imgIndex => imgIndex + -1)
+    }
+   }
    const produs = {
     name:"KINDER BUENO",
     price:"2.00",
@@ -33,6 +46,11 @@ const Product = () => {
          Spirulina Extract, Skim Milk, Eggs.`,
     alergens: 'Milk, egg, soy, wheat'
    }
+   const images = [require('../../assets/donut1x2.png'),
+   require('../../assets/donut2x2.png'),
+   require('../../assets/donut3x2.png'),
+   require('../../assets/donut4x2.png'),
+   require('../../assets/donut5x2.png')]
   
 
  
@@ -45,23 +63,28 @@ const Product = () => {
     <div className="product">Kinder Bueno</div>
   </div>
   <div className="mobileTablet">
-    <div className="otherimages">
-        <img src={require('../../assets/donut1.png')} className="images" alt='donut'></img>
-        <img src={require('../../assets/donut2.png')} className="images" alt='donut'></img>
-        <img src={require('../../assets/donut3.png')} className="images" alt='donut'></img>
-        <img src={require('../../assets/donut4.png')} className="images" alt='donut'></img>
-        <img src={require('../../assets/donut5.png')} className="images" alt='donut'></img>
+    <div className="otherimagesgroup">
+        <div className="otherimages">
+        <img src={require('../../assets/donut1.png')} className="images" alt='donut' onClick={()=>{setImgIndex(0);}}/>
+        <img src={require('../../assets/donut2.png')} className="images" alt='donut'  onClick={()=>{setImgIndex(1);}}/>
+        <img src={require('../../assets/donut3.png')} className="images" alt='donut' onClick={()=>{setImgIndex(2);}}/>
+        <img src={require('../../assets/donut4.png')} className="images" alt='donut' onClick={()=>{setImgIndex(3);}}/>
+        <img src={require('../../assets/donut5.png')} className="images" alt='donut' onClick={()=>{setImgIndex(4);}}/>
+        </div>
+        <div className="imgshowcaseDesktop">
+     <img src={images[imgIndex]} alt="donut" className="imageSlide" />
+     </div>
+        <div className="imgshowcase">
+     <img src={images[imgIndex]} alt="donut" className="imageSlide" />
+     <div className="pointers">
+     <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className='normal' onClick={decreaseIndex} />
+     <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className="reverse" onClick={increaseIndex}/>
+     </div>
+     </div>
+     
     </div>
   
-     <div className="imgshowcase">
-        
-     <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className='normal' />
-     <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className="reverse"/>
- 
-     </div>
-     <div className="imgshowcaseDesktop">
-        
-     </div>
+     
   
      
 
