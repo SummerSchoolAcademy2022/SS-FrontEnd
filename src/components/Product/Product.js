@@ -20,37 +20,21 @@ const Product = () => {
       if(counter > 0){
         setCounter(count => count -1); }
     };
-    
-    // ----------------------------------------
-    const [imgIndex, setImgIndex] = useState(0);
 
-    const increaseIndex = () =>{
-     if(imgIndex === 4) {setImgIndex(0)}
-     else{setImgIndex(imgIndex => imgIndex + 1)}
-    }
-    
-    const decreaseIndex = () =>{
-     if(imgIndex === 0){setImgIndex(4)}
-     else{
-         setImgIndex(imgIndex => imgIndex + -1)
-     }
-    }
+   const produs = {
+    name:"KINDER BUENO",
+    price:"2.00",
+    description:`Donut with white chocolate icing, 
+    dark chocolate curls, Kinder Bueno ™ 
+    wafers and delicate milk chocolate lines.`,
+    numberReviews:3190,
+    ingredients:`Cream, Milk, Cane Sugar, Cake Pieces, Cake Base, Sprinkles (Sugar, Coconut Oil
+        , Buttermilk Powder, Natural Flavor,
+         Spirulina Extract, Skim Milk, Eggs.`,
+    alergens: 'Milk, egg, soy, wheat'
+   }
+  
 
-
-    const location = useLocation();
-    const splitPath = location?.pathname?.split("/");
-    const productId = splitPath[splitPath.length - 1];
-    const product = mockProducts.filter((prod) => prod.id === productId);
-  
-    console.log("product", product)
-  
-  const donutimages = [
-  require('../../assets/donut1x2.png'),
-  require('../../assets/donut2x2.png'),
-  require('../../assets/donut3x2.png'),
-  require('../../assets/donut4x2.png'),
-  require('../../assets/donut5x2.png')]
-  
  
   return <>
   <div className="breadcrum">
@@ -62,22 +46,25 @@ const Product = () => {
   </div>
   <div className="mobileTablet">
     <div className="otherimages">
-        <img src={require('../../assets/donut1.png')} className="images" alt='donut'onClick={()=>setImgIndex(0)}></img>
-        <img src={require('../../assets/donut2.png')} className="images" alt='donut'onClick={()=>setImgIndex(1)}></img>
-        <img src={require('../../assets/donut3.png')} className="images" alt='donut'onClick={()=>setImgIndex(2)}></img>
-        <img src={require('../../assets/donut4.png')} className="images" alt='donut'onClick={()=>setImgIndex(3)}></img>
-        <img src={require('../../assets/donut5.png')} className="images" alt='donut'onClick={()=>setImgIndex(4)}></img>
+        <img src={require('../../assets/donut1.png')} className="images" alt='donut'></img>
+        <img src={require('../../assets/donut2.png')} className="images" alt='donut'></img>
+        <img src={require('../../assets/donut3.png')} className="images" alt='donut'></img>
+        <img src={require('../../assets/donut4.png')} className="images" alt='donut'></img>
+        <img src={require('../../assets/donut5.png')} className="images" alt='donut'></img>
     </div>
   
      <div className="imgshowcase">
         
-     <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className='normal' onClick={decreaseIndex}/>
-     <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className="reverse"onClick={increaseIndex}/>
-     {/* <img src={donutimages(imgIndex)} alt="donut" /> */}
+     <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className='normal' />
+     <img src={require('../../assets/arrowimg.png')} alt="arrow" width="40"  height="40" className="reverse"/>
+ 
      </div>
      <div className="imgshowcaseDesktop">
-     <img src={donutimages[imgIndex]} alt="donut" />
+        
      </div>
+  
+     
+
   
   <div className="about">
   <div className="name"></div>
