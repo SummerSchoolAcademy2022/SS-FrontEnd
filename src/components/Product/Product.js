@@ -34,25 +34,17 @@ const Product = () => {
         setImgIndex(imgIndex => imgIndex + -1)
     }
    }
-   const produs = {
-    name:"KINDER BUENO",
-    price:"2.00",
-    description:`Donut with white chocolate icing, 
-    dark chocolate curls, Kinder Bueno ™ 
-    wafers and delicate milk chocolate lines.`,
-    numberReviews:3190,
-    ingredients:`Cream, Milk, Cane Sugar, Cake Pieces, Cake Base, Sprinkles (Sugar, Coconut Oil
-        , Buttermilk Powder, Natural Flavor,
-         Spirulina Extract, Skim Milk, Eggs.`,
-    alergens: 'Milk, egg, soy, wheat'
-   }
+  
    const images = [require('../../assets/donut1x2.png'),
    require('../../assets/donut2x2.png'),
    require('../../assets/donut3x2.png'),
    require('../../assets/donut4x2.png'),
    require('../../assets/donut5x2.png')]
   
-
+   const location = useLocation();
+   const splitPath = location?.pathname?.split("/");
+   const productId = splitPath[splitPath.length - 1];
+   const product = mockProducts.filter((prod) => prod.id === productId);
  
   return <>
   <div className="breadcrum">
