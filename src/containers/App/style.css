@@ -460,6 +460,17 @@ display:flex;
   .otherimages{
     display:none;
   }
+  .rating{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .review{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+  }
   .mobileTablet{
   display: flex;
   flex-direction: row;
