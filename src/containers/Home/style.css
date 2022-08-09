@@ -1,54 +1,113 @@
-html {
-    /* colors */
-      --primary: #007BFF;
-      --primary-hover: #0069D9;
-      --primary-disabled: #58AAFF;
-      --secondary: #6c757d;
-      --secondary-hover: #5a6268;
-      --secondary-disable: #b0b6ba;
-      --light: #F8F9FA;
-      --light-hover: #E2E6EA;
-      --light-disable: #FAFCFC;
-      --dark: #343A40;
-      --dark-hover: #23272B;
-      --dark-disable: #7A7E83;
-      --universal-white: #fff;
-      --universal-black: #000;
-    
-    /* typography */
-      --font-family: Helvetica Neue;
-      --typo-1: 29px;
-      --typo-2: 24px;
-      --typo-3: 22px;
-      --typo-4: 19px;
-      --body-1: 20px;
-      --body-2: 16px;
-    
-    /* border radius */
-      --border-radius: 15px;
-    
-    /* border colors */
-      --border-primary: #72B0F2;
-    };
-    
-    .default-button {
-      color: var(--universal-white);
-      background-color: red;
-      font-family: var(--font-family);
-      font-size: var(--body-1);
-      padding: 20px 25px;
-      border-radius: var(--border-radius);
-      margin-right: 30px;
-    }
-    
-    .default-button:hover {
-      background-color: var(--primary-hover);
-    }
-    
-    .default-button:active {
-      margin: 10px solid var(--border-primary);
-    }
-    
-    .default-button:disabled {
-      background-color: var(--primary-disabled);
-    }
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playfair+Display&family=Roboto&display=swap');
+
+:root {
+/* colors */
+  --primary: #007BFF;
+  --primary-hover: #0069D9;
+  --primary-disabled: #58AAFF;
+  --secondary: #6c757d;
+  --secondary-hover: #5a6268;
+  --secondary-disable: #b0b6ba;
+  --light: #F8F9FA;
+  --light-hover: #E2E6EA;
+  --light-disable: #FAFCFC;
+  --dark: #343A40;
+  --dark-hover: #23272B;
+  --dark-disable: #7A7E83;
+  --universal-white: #fff;
+  --universal-black: #000;
+
+/* typography */
+  --font-family: 'Roboto', sans-serif;
+  --typo-1: 29px;
+  --typo-2: 24px;
+  --typo-3: 22px;
+  --typo-4: 19px;
+  --typo-5: 15px;
+  --body-1: 20px;
+  --body-2: 16px;
+
+/* border radius */
+  --border-radius: 5px;
+
+/* border colors */
+  --border-primary: #72B0F2;
+
+/* input widths */
+  --input-width: 300px;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.default-button {
+  color: var(--universal-white);
+  background-color: var(--primary);
+  font-family: var(--font-family);
+  font-size: var(--body-1);
+  padding: 10px 15px;
+  border: 0;
+  border-radius: var(--border-radius);
+  margin-right: 30px;
+}
+
+.default-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.default-button:active {
+  margin: -3px;
+  margin-right: 27px;
+  border: 3px solid var(--border-primary);
+}
+
+.default-button:disabled {
+  margin: 0px;
+  margin-right: 30px;
+  border: 0;
+  background-color: var(--primary-disabled);
+}
+
+.newsletter-subscribe {
+    display: inline-flex;
+}
+
+input {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 32px;
+  border: 1px solid var(--universal-black);
+  border-right: 0px;
+  padding-bottom: 0px;
+  font-size: var(--typo-4);
+  padding-left: 10px;
+  width: var(--input-width);
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+.input-button {
+    color: var(--universal-black);
+    background-color: var(--universal-white);
+    font-family: var(--font-family);
+    font-size: var(--body-1);
+    padding: 10px 15px;
+    border: 2px solid var(--universal-black);
+    border-radius:  0 var(--border-radius) var(--border-radius) 0;
+    margin-right: 30px;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.input-button:hover {
+    background-color: var(--universal-black);
+    color: var(--universal-white);
+}
+
+.input-button:disabled {
+    background-color: white;
+    color: var(--secondary);
+}
