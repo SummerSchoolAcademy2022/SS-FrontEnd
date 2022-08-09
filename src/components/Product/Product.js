@@ -52,7 +52,7 @@ const Product = () => {
     <div className="arrow"><img src={require("../../assets/arrow.png")} alt="arrow" /></div>
     <Link to = "/donuts" className="links">Donuts</Link>
     <div className="arrow"><img src={require("../../assets/arrow.png")} alt="arrow" /></div>
-    <div className="product">Kinder Bueno</div>
+    <div className="product">{product[0].name}</div>
   </div>
   <div className="mobileTablet">
     <div className="otherimagesgroup">
@@ -82,7 +82,7 @@ const Product = () => {
 
   
   <div className="about">
-  <div className="name"></div>
+  <div className="name">{product[0].name}</div>
   <div className="ratingAndReviews">
     <div className="rating">
         <img src={require('../../assets/steaPlina.png')} alt="star" />
@@ -92,15 +92,15 @@ const Product = () => {
         <img src={require('../../assets/steaGoala.png')} alt="empty star" />
     </div>
     <div className="review">
-         REVIEWS
+         {product[0].numberReviews} REVIEWS
     </div>
     
   </div>
   <div className="price">
-       
+       ${product[0].price}
     </div>
     <div className="description">
-       
+       {product[0].description}
     </div>
 
           <div className="quantityAndBasket">
@@ -117,11 +117,11 @@ const Product = () => {
           </div>
           <div className="ingredients">
             <h1>INGREDIENTS:</h1>
-            
+            {product[0].ingredients}
           </div>
           <div className="alergens">
             <h1>ALERGENS</h1>
-          
+          {product[0].alergens}
           </div>
           <div className="share">
             <h1>SHARE WITH YOUR FRIENDS</h1>

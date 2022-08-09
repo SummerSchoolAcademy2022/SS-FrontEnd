@@ -1,8 +1,8 @@
 const mockProducts = [
   {
     id: "kinder-bueno",
-    name: "KINDER BUENO",
-    price: 200,
+    name: "Kinder Bueno",
+    price: '2.00',
     description: `Donut with white chocolate icing, 
   dark chocolate curls, Kinder Bueno ™ 
   wafers and delicate milk chocolate lines.`,
