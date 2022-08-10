@@ -35,11 +35,11 @@ const Product = () => {
     }
    }
   
-   const images = [require('../../assets/donut1x2.png'),
-   require('../../assets/donut2x2.png'),
-   require('../../assets/donut3x2.png'),
-   require('../../assets/donut4x2.png'),
-   require('../../assets/donut5x2.png')]
+   const images = [require('../../assets/kinder-bueno/donut1x2.png'),
+   require('../../assets/kinder-bueno/donut2x2.png'),
+   require('../../assets/kinder-bueno/donut3x2.png'),
+   require('../../assets/kinder-bueno/donut4x2.png'),
+   require('../../assets/kinder-bueno/donut5x2.png')]
   
    const location = useLocation();
    const splitPath = location?.pathname?.split("/");

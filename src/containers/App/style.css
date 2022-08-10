@@ -449,7 +449,7 @@ display:flex;
 }
 @media (max-width:767px){
    .otherimagesgroup{
-    width: 100vw;
+    width: 99vw;
    }
    .ingredients{
     width: 80vw;
@@ -492,7 +492,7 @@ display:flex;
   display:flex;
   flex-direction: column;
  height: 100%;
- width: 100vw;
+ width: 99vw;
 
 }
 .otherimages{
