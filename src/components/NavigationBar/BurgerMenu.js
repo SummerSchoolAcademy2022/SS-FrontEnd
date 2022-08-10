@@ -9,14 +9,14 @@ import Basket from "../../assets/basket.png";
 const BurgerMenu = () => {
   const [display, setState] = useState("none");
   const isClosed = () => {
-    if (setState(display) === "none") {
+    if (display === "none") {
       setState("none");
     } else {
       setState("flex");
     }
   };
   const isOpen = () => {
-    if (setState(display) === "none") {
+    if (display === "none") {
       setState("flex");
     } else {
       setState("none");
