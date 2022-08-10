@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../containers/App/style.css";
-
+import "../App/style.css";
+import { donuts } from "../../constants/constants.js";
+import Card from "./Card";
+import TopSellingDonuts from "../../components/TopSellingDonuts/TopSellingDonuts";
+import AllProducts from "../../components/AllProducts/AllProducts";
+import Banner from "../../components/Banner/Banner";
 const Donuts = () => {
   const product1 = "kinder-bueno";
   const product1Name = "Kinder Bueno";
@@ -17,9 +21,9 @@ const Donuts = () => {
       <Link to={`/product/${product2}`} className="links">
         {product2Name}
       </Link>
-      <div>Banner cu textul Donuts</div>
-      <div>Top Selling Donuts</div>
-      <div>All donuts Products</div>
+       <Banner bannerText="Donuts"/>
+       <TopSellingDonuts/>
+       <AllProducts/>
     </>
   );
 };
