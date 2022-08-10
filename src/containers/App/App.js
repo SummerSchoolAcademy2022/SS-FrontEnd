@@ -6,6 +6,7 @@ import Gelato from "../Gelato";
 import GelatoForSpecialNeeds from "../GelatoForSpecialNeeds";
 import Navbar from "../../components/NavigationBar/NavigationBar";
 import Footer from "../../components/Footer/Footer";
+import Product from "../../components/Product/Product";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             path="/gelatoforspecialneeds"
             element={<GelatoForSpecialNeeds />}
           ></Route>
+          <Route path="/product/:id" element={<Product />}></Route>
         </Routes>
         {/* <Home /> */}
         <Footer />
