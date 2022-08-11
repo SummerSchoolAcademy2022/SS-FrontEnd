@@ -1,5 +1,6 @@
 /* Footer desktop*/
 * {
+  
   box-sizing: border-box;
 }
 
@@ -17,7 +18,7 @@ li {
 }
 
 footer {
-  min-width: 600px;
+  width: 100vw;
 }
 
 .row {
@@ -129,6 +130,8 @@ footer a {
 
   .row {
     padding: 0;
+    width: 100vw;
+    overflow: hidden;
   }
 
   .newsletter-column {

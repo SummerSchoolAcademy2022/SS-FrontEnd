@@ -426,7 +426,7 @@
   gap: 20px;
 }
 .imageSlide {
-  width: 100%;
+  width: 99%;
   height: 90%;
   flex-grow: 10;
 }
@@ -435,7 +435,7 @@
 }
 @media (max-width: 767px) {
   .otherimagesgroup {
-    width: 99vw;
+    width: 98%;
   }
   .ingredients {
     width: 80vw;
@@ -446,7 +446,7 @@
   .imgshowcase {
     position: relative;
     z-index: -1;
-    width: 100%;
+    width: 98%;
     display: flex;
     height: 100%;
     margin: 0;
@@ -455,12 +455,12 @@
   }
   .otherimagesgroup {
     z-index: 0;
-
+    width: 98%;
     flex-grow: 10;
   }
-  .imageSlide {
-    width: 100%;
-  }
+  /* .imageSlide {
+    width: 90vw;
+  } */
   .pointers {
     position: absolute;
     display: flex;
