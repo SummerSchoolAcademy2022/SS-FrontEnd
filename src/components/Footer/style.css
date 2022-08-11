@@ -1,5 +1,6 @@
 /* Footer desktop*/
 * {
+  
   box-sizing: border-box;
 }
 
@@ -17,8 +18,8 @@ li {
 }
 
 footer {
-  /* min-width: 600px; */
   padding-top: 30px;
+  width: 100vw;
 }
 
 .row {
@@ -107,6 +108,10 @@ footer a {
   margin: 15px 0;
 }
 
+.errorMail {
+  color: #ca0c0c;
+}
+
 @media only screen and (max-width: 1365px) {
   .newsletter-column {
     order: -1;
@@ -130,6 +135,8 @@ footer a {
 
   .row {
     padding: 0;
+    width: 100vw;
+    overflow: hidden;
   }
 
   .newsletter-column {

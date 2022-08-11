@@ -2,11 +2,13 @@ import "./style.css";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import useScreenSize from "../../hooks/useScreenSize";
+import React from "react";
 
 export default function Footer() {
   const [isOpenUseful, setIsOpenUseful] = useState(false);
   const [isOpenFind, setIsOpenFind] = useState(false);
   const [isOpenAbout, setIsOpenAbout] = useState(false);
+  const [emailError, setEmailError] = useState(false);
 
   const onExpandUseful = () => {
     setIsOpenUseful(!isOpenUseful);
@@ -32,13 +34,14 @@ export default function Footer() {
     }
   }, [screenSize]);
 
+
   const [email, setEmail] = useState(" ");
 
   function handleChange(event) {
     setEmail(event.target.value);
   }
 
-  function handleClick(event) {
+  function handleSubmit(event) {
     event.preventDefault();
     if (isValid(email)) {
       alert(`You have successfully subscribed to our newsletter with this email adress: ${email}`);
@@ -56,21 +59,63 @@ export default function Footer() {
     return false;
   }
 
+  let inputRef = React.createRef();
+  let buttonRef = React.createRef();
+  let errorRef = React.createRef();
+
+  const checkEmailFormat = (email) => {
+    const regex = new RegExp("[a-zA-Z0-9-]+@[a-zA-Z-]+.com");
+
+    if (regex.test(email)) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const handleClick = () => {
+    const checkEmail = checkEmailFormat(inputRef?.current?.value);
+    if (checkEmail) {
+      setEmailError(false);
+      alert(
+        "A verification email for activating your account has been submitted to your address!"
+      );
+      inputRef.current.value = "";
+    } else {
+      setEmailError(true);
+    }
+  };
+
   return (
     <footer>
       <div className="row">
         <div className="column newsletter-column">
           <h2>NEWSLETTER</h2>
-          <form id="buttons" onSubmit={handleClick}>
+          <form id="buttons" onSubmit={handleSubmit}>
             <input
+              ref={inputRef}
               id="buton-text"
               onChange={handleChange}
               type="email"
               pattern="^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$"
               value={email}
             />
-            <input type="submit" value="Subscribe" id="subscribe" />
+             <input
+              ref={buttonRef}
+              onClick={handleClick}
+              type="button"
+              value="Subscribe"
+              id="subscribe"
+            />
+            
+            {emailError && (
+            <p ref={errorRef} className="errorMail">
+              A valid email would be: example@domain.com
+            </p>
+          )}
           </form>
+          </div>
+         
         </div>
 
         <div className="column">

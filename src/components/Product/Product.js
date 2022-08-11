@@ -8,7 +8,7 @@ import mockProducts from "./mockProducts";
 import { useLocation } from "react-router-dom";
 
 const Product = () => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(1);
 
   const increaseCounter = () => {
     setCounter((count) => count + 1);
@@ -70,9 +70,9 @@ const Product = () => {
       </div>
       <div className="mobileTablet">
         <div className="otherimagesgroup">
-          {/* <div className="otherimages">
+          <div className="otherimages">
             <img
-              src={require("../../assets/kinder-bueno/donut3x2.png")}
+              src={require("../../assets/product-pictures/kinder-bueno/donut1x2.png")}
               className="images"
               alt="donut"
               onClick={() => {
@@ -80,7 +80,7 @@ const Product = () => {
               }}
             />
             <img
-              src={require("../../assets/donut2.png")}
+              src={require("../../assets/product-pictures/kinder-bueno/donut2x2.png")}
               className="images"
               alt="donut"
               onClick={() => {
@@ -88,7 +88,7 @@ const Product = () => {
               }}
             />
             <img
-              src={require("../../assets/donut3.png")}
+              src={require("../../assets/product-pictures/kinder-bueno/donut3x2.png")}
               className="images"
               alt="donut"
               onClick={() => {
@@ -96,7 +96,7 @@ const Product = () => {
               }}
             />
             <img
-              src={require("../../assets/donut4.png")}
+              src={require("../../assets/product-pictures/kinder-bueno/donut4x2.png")}
               className="images"
               alt="donut"
               onClick={() => {
@@ -104,14 +104,14 @@ const Product = () => {
               }}
             />
             <img
-              src={require("../../assets/donut5.png")}
+              src={require("../../assets/product-pictures/kinder-bueno/donut5x2.png")}
               className="images"
               alt="donut"
               onClick={() => {
                 setImgIndex(4);
               }}
             />
-          </div> */}
+          </div>
           <div className="imgshowcaseDesktop">
             <img src={images[imgIndex]} alt="donut" className="imageSlide" />
           </div>
