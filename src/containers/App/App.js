@@ -1,12 +1,14 @@
 import Home from "../Home/index";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Donuts from "../Donuts";
 import DonutsForSpecialNeeds from "../DonutsForSpecialNeeds";
 import Gelato from "../Gelato";
 import GelatoForSpecialNeeds from "../GelatoForSpecialNeeds";
 import Navbar from "../../components/NavigationBar/NavigationBar";
 import Footer from "../../components/Footer/Footer";
 import Product from "../../components/Product/Product";
+import Donuts from "../Donuts/index";
+import Banner from "../../components/Banner/Banner";
+// import Basket from "../Basket";
 
 function App() {
   return (
@@ -26,8 +28,10 @@ function App() {
             path="/gelatoforspecialneeds"
             element={<GelatoForSpecialNeeds />}
           ></Route>
+          {/* <Route path="/basket" element={<Basket />}></Route> */}
           <Route path="/product/:id" element={<Product />}></Route>
         </Routes>
+
         {/* <Home /> */}
         <Footer />
       </div>

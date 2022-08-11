@@ -18,6 +18,7 @@ li {
 }
 
 footer {
+  padding-top: 30px;
   width: 100vw;
 }
 
@@ -144,8 +145,9 @@ footer a {
 }
 
 @media only screen and (max-width: 768px) {
+ 
   .column {
-    width: 100%;
+    width: 90%;
     margin-top: 0;
     border-top: 1px solid white;
   }

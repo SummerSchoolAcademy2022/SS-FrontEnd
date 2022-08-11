@@ -7,7 +7,19 @@ import Account from "../../assets/account.png";
 import AccountHover from "../../assets/accountHover.png";
 import Basket from "../../assets/basket.png";
 import BasketHover from "../../assets/basketHover.png";
+import { useNavigate } from 'react-router-dom';
+
 function Navbar() {
+  const navigate = useNavigate();
+
+  const redirectBasket = () => {
+    navigate('/basket');
+  }
+
+  const redirectAccount = () => {
+    navigate('/account');
+  }
+
   return (
     <>
       <div className="navbarContainer">
@@ -50,7 +62,7 @@ function Navbar() {
           </ul>
         </div>
         <div className="rightContainer">
-          <div className="boxAccount">
+          <div className="boxAccount" onClick={redirectAccount}>
             <div className="iconNormal">
               <img src={Account} alt="account" />
             </div>
@@ -60,7 +72,7 @@ function Navbar() {
             Account
           </div>
 
-          <div className="boxBasket">
+          <div className="boxBasket" onClick={redirectBasket}>
             <div className="iconNormal">
               <img src={Basket} alt="Basket" />
             </div>
