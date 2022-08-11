@@ -2,11 +2,13 @@ import "./style.css";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import useScreenSize from "../../hooks/useScreenSize";
+import React from "react";
 
 export default function Footer() {
   const [isOpenUseful, setIsOpenUseful] = useState(false);
   const [isOpenFind, setIsOpenFind] = useState(false);
   const [isOpenAbout, setIsOpenAbout] = useState(false);
+  const [emailError, setEmailError] = useState(false);
 
   const onExpandUseful = () => {
     setIsOpenUseful(!isOpenUseful);
@@ -32,6 +34,33 @@ export default function Footer() {
     }
   }, [screenSize]);
 
+  let inputRef = React.createRef();
+  let buttonRef = React.createRef();
+  let errorRef = React.createRef();
+
+  const checkEmailFormat = (email) => {
+    const regex = new RegExp("[a-zA-Z0-9-]+@[a-zA-Z-]+.com");
+
+    if (regex.test(email)) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const handleClick = () => {
+    const checkEmail = checkEmailFormat(inputRef?.current?.value);
+    if (checkEmail) {
+      setEmailError(false);
+      alert(
+        "A verification email for activating your account has been submitted to your address!"
+      );
+      inputRef.current.value = "";
+    } else {
+      setEmailError(true);
+    }
+  };
+
   return (
     <footer>
       {/* <div>Is Mobile: {screenSize}</div> */}
@@ -44,9 +73,21 @@ export default function Footer() {
               type="email"
               name="email"
               pattern="^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$"
+              ref={inputRef}
             />
-            <input type="button" value="Subscribe" id="subscribe" />
+            <input
+              ref={buttonRef}
+              onClick={handleClick}
+              type="button"
+              value="Subscribe"
+              id="subscribe"
+            />
           </div>
+          {emailError && (
+            <p ref={errorRef} className="errorMail">
+              A valid email would be: example@domain.com
+            </p>
+          )}
         </div>
 
         <div className="column">
