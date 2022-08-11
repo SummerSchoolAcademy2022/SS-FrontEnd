@@ -28,7 +28,7 @@ const BurgerMenu = () => {
       <img
         src={Burger}
         alt="menu"
-        onClick={isClosed}
+        onClick={isOpen}
       />
       <nav className="burgerMenu" style={{ display: display }}>
         <div className="closeButton">

@@ -610,15 +610,17 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#topSelling,
+
 .all {
   background-color: white;
   /* text-align:center; */
-
+  display:flex;
+  flex-direction: column;
   position: relative;
   height: 100%;
   max-width: 100%;
   justify-content: space-between;
+  overflow: scroll;
 }
 .all {
   margin-left: 17px;
@@ -655,14 +657,14 @@ h3 {
 }
 #donutsTop {
   overflow-x: scroll;
-  overflow-x: hidden;
+  
   overflow-y: hidden;
   display: flex;
   margin: 0 auto;
   /* max-width: 1600px; */
   /* margin-left: 30px; */
-  margin-bottom: 2.5rem;
-  list-style: none;
+  /* margin-bottom: 2.5rem; */
+  /* list-style: none;
   align-items: center;
   justify-content: center;
   padding: 0;
@@ -670,14 +672,17 @@ h3 {
   height: 388px;
   margin-left: 17px;
   margin-right: 17px;
+  margin-bottom:50px; */
 }
 .donutsAll {
   /* max-width: 1200px; */
   margin: 0 auto;
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   grid-template-columns: repeat(4, 1fr);
-  justify-content: space-between;
-  grid-column-gap: 1em;
+  justify-content: flex-start;
+  gap:30px;
   /* grid-gap: 20px 0; */
   margin-left: 0;
   margin-right: 0;
@@ -686,17 +691,15 @@ h3 {
   transition: all 150ms ease-in-out;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: left;
+  width: 315px;
+  height: 388px;
+  margin: 0 0 10px 0;
 }
-.donut img {
-  width: 100%;
-}
+
 .donutsAll .donut {
-  width: 90%;
+ 
   margin-bottom: 10px;
   height: 25rem;
-}
-#donutsTop .donut {
-  margin-right: 17px;
 }
 
 .donut p {
@@ -754,10 +757,13 @@ h4 {
 
 @media (max-width: 500px) {
   #donutsTop {
-    overflow-x: scroll;
-
-    overflow-y: hidden;
+    /* overflow-x: scroll; */
+     
+     display: flex;
+     gap:30px;
+   
   }
+
   .donutsAll {
     grid-template-columns: repeat(1, 1fr);
     /* width: 421px; */
@@ -803,11 +809,12 @@ h4 {
 }
 
 @media (min-width: 500px) and (max-width: 876px) {
-  #donutsTop, #gelatoTop {
+  #donutsTop{
     overflow-x: scroll;
-
+  
     overflow-y: hidden;
   }
+
 
   .donutsAll, .gelatoAll {
     grid-template-columns: repeat(2, 1fr);
@@ -880,22 +887,23 @@ h4 {
 
 #gelatoTop {
   overflow-x: scroll;
-  overflow-x: hidden;
+ 
   overflow-y: hidden;
   display: flex;
   margin: 0 auto;
   max-width: 100%;
+  align-items: flex-start;
   /* margin-left: 30px; */
-  margin-bottom: 2.5rem;
+  /* margin-bottom: 2.5rem;
   list-style: none;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   padding: 0;
   /* width: 1332px; */
-  max-width: 100%;
+  /* max-width: 100%; */
   height: 388px;
-  margin-left: 17px;
-  margin-right: 17px;
+  /* margin-left: 17px;
+  margin-right: 17px; */
 }
 .gelatoAll {
   max-width: 100%;
@@ -936,4 +944,34 @@ h4 {
 }
 .gelato h3 {
   margin-top: 15px;
+}
+.donut img{
+  width: 100%;
+  height: 181px;
+}
+
+#donutsTop{
+  justify-content: flex-start;
+  gap:30px;
+  
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+#topSelling{
+  overflow: scroll;
+}
+
+.topSellingDiv{
+  margin-left: 25px;
+  margin-bottom: 50px;
+  margin-top:30px;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+#topSelling #gelatoTop{
+  overflow: scroll;
 }

@@ -19,11 +19,12 @@ import gelato1 from "../assets/gelato1.png";
 import gelato2 from "../assets/gelato2.png";
 import gelato3 from "../assets/gelato3.png";
 import gelato4 from "../assets/gelato4.png";
-
+import kidner from "../assets/product-pictures/kinder-bueno/donut1x2.png"
 
 
 export const gelato = {
   products: [
+  
     {
       id: 1,
       picture: gelato1,
@@ -162,6 +163,13 @@ export const gelato = {
 
 export const donuts = {
   products: [
+    {
+      id:20,
+      picture:kidner,
+      description:'Donut with white chocolate icing, dark chocolate curls, Kinder Bueno ™.',
+      name:'kinder-bueno',
+      price:"$2.50"
+     },
     {
       id: 1,
       picture: dnt1,

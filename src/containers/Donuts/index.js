@@ -14,13 +14,7 @@ const Donuts = () => {
 
   return (
     <>
-      <Link to={`/product/${product1}`} className="links">
-        {product1Name}
-      </Link>
-      <br />
-      <Link to={`/product/${product2}`} className="links">
-        {product2Name}
-      </Link>
+    
        <Banner bannerText="Donuts"/>
        <TopSellingDonuts/>
        <AllProducts/>
