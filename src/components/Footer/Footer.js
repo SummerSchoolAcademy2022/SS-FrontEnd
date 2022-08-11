@@ -106,13 +106,13 @@ export default function Footer() {
               value="Subscribe"
               id="subscribe"
             />
-
-            {emailError && (
+            
+          </form>
+          {emailError && (
               <p ref={errorRef} className="errorMail">
-                A valid email would be: example@domain.com
+              <br />A valid email would be: example@domain.com
               </p>
             )}
-          </form>
         </div>
 
         <div className="column">
