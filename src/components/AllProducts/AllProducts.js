@@ -1,6 +1,6 @@
 import React from "react";
 import "../../containers/App/style.css";
-import { donuts } from "../../constants/constants.js";
+import  donuts  from "../../constants/constants.js";
 import Card from "../../containers/Donuts/Card";
 
 

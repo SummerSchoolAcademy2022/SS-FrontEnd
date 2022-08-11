@@ -15,38 +15,183 @@ import dnt14 from "../assets/dnt14.png";
 import dnt15 from "../assets/dnt15.png";
 import dnt16 from "../assets/dnt16.png";
 
+import gelato1 from "../assets/gelato1.png";
+import gelato2 from "../assets/gelato2.png";
+import gelato3 from "../assets/gelato3.png";
+import gelato4 from "../assets/gelato4.png";
+
+
+
+export const gelato = {
+  products: [
+    {
+      id: 1,
+      picture: gelato1,
+      name: "Pistachio Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 2,
+      picture: gelato2,
+      name: "Watermelon Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 3,
+      picture: gelato3,
+      name: "Strawberry Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 4,
+      picture: gelato4,
+      name: "Watermelon Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+  
+  ],
+  productsall:[
+    {
+      id: 5,
+      picture: gelato1,
+      name: "Pistachio Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 6,
+      picture: gelato2,
+      name: "Watermelon Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 7,
+      picture: gelato3,
+      name: "Strawberry Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 8,
+      picture: gelato4,
+      name: "Watermelon Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 9,
+      picture: gelato1,
+      name: "Pistachio Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 10,
+      picture: gelato2,
+      name: "Watermelon Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 11,
+      picture: gelato3,
+      name: "Strawberry Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 12,
+      picture: gelato4,
+      name: "Watermelon Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 13,
+      picture: gelato1,
+      name: "Pistachio Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 14,
+      picture: gelato2,
+      name: "Watermelon Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 15,
+      picture: gelato3,
+      name: "Strawberry Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+    {
+      id: 16,
+      picture: gelato4,
+      name: "Watermelon Ice Cream",
+      description:
+        "Treat yourself to icecream infused with smooth Bourbon sprinkled",
+      price: "$ 2.50",
+    },
+
+  ]
+};
+
+
 export const donuts = {
   products: [
     {
       id: 1,
       picture: dnt1,
-      name: "Pistachio Cream",
+      name: "Pistachio Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 2,
       picture: dnt2,
-      name: "Watermelon Ice Cream",
+      name: "Watermelon Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 3,
       picture: dnt3,
-      name: "Strawberry Ice Cream",
+      name: "Strawberry Donuts",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 4,
       picture: dnt4,
-      name: "Watermelon Ice Cream",
+      name: "Watermelon Donuts",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
   
@@ -55,99 +200,101 @@ export const donuts = {
     {
       id: 5,
       picture: dnt5,
-      name: "Pistachio Cream",
+      name: "Pistachio Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 6,
       picture: dnt6,
-      name: "Watermelon Ice Cream",
+      name: "Watermelon Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 7,
       picture: dnt7,
-      name: "Strawberry Ice Cream",
+      name: "Strawberry Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 8,
       picture: dnt8,
-      name: "Watermelon Ice Cream",
+      name: "Watermelon Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 9,
       picture: dnt9,
-      name: "Pistachio Cream",
+      name: "Pistachio Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 10,
       picture: dnt10,
-      name: "Watermelon Ice Cream",
+      name: "Watermelon Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 11,
       picture: dnt11,
-      name: "Strawberry Ice Cream",
+      name: "Strawberry Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 12,
       picture: dnt12,
-      name: "Watermelon Ice Cream",
+      name: "Watermelon Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 13,
       picture: dnt13,
-      name: "Pistachio Cream",
+      name: "Pistachio Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 14,
       picture: dnt14,
-      name: "Watermelon Ice Cream",
+      name: "Watermelon Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 15,
       picture: dnt15,
-      name: "Strawberry Ice Cream",
+      name: "Strawberry Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
     {
       id: 16,
       picture: dnt16,
-      name: "Watermelon Ice Cream",
+      name: "Watermelon Donut",
       description:
-        "Treat yourself with icecream infused with smooth Bourbon sprinkled",
+        "Treat yourself to donuts infused with smooth Bourbon sprinkled",
       price: "$ 2.50",
     },
 
   ]
 };
+
+export default donuts;

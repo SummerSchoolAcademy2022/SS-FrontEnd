@@ -32,21 +32,45 @@ export default function Footer() {
     }
   }, [screenSize]);
 
+  const [email, setEmail] = useState(" ");
+
+  function handleChange(event) {
+    setEmail(event.target.value);
+  }
+
+  function handleClick(event) {
+    event.preventDefault();
+    if (isValid(email)) {
+      alert(`You have successfully subscribed to our newsletter with this email adress: ${email}`);
+    }
+    else {
+      alert("Invalid email adress");
+    }
+  }
+
+  const regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+
+  function isValid(text) {
+    if (regex.test(text))
+      return true;
+    return false;
+  }
+
   return (
     <footer>
-      {/* <div>Is Mobile: {screenSize}</div> */}
       <div className="row">
         <div className="column newsletter-column">
           <h2>NEWSLETTER</h2>
-          <div id="buttons">
+          <form id="buttons" onSubmit={handleClick}>
             <input
               id="buton-text"
+              onChange={handleChange}
               type="email"
-              name="email"
               pattern="^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$"
+              value={email}
             />
-            <input type="button" value="Subscribe" id="subscribe" />
-          </div>
+            <input type="submit" value="Subscribe" id="subscribe" />
+          </form>
         </div>
 
         <div className="column">
