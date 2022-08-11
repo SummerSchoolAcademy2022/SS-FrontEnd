@@ -17,7 +17,7 @@ const mockProducts = [
     name: "Cocoa Donuts",
     price: "3.00",
     description: `Donut with white chocolate icing, 
-  dark chocolate curls, Kinder Bueno ™ 
+  dark chocolate curls, cocoa ™ 
   wafers and delicate milk chocolate lines.`,
     numberReviews: 4200,
     ingredients: `Cream, Milk, Cane Sugar, Cake Pieces, Cake Base, Sprinkles (Sugar, Coconut Oil
