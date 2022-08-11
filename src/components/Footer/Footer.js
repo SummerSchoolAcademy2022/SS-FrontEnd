@@ -34,7 +34,6 @@ export default function Footer() {
     }
   }, [screenSize]);
 
-
   const [email, setEmail] = useState(" ");
 
   function handleChange(event) {
@@ -44,18 +43,18 @@ export default function Footer() {
   function handleSubmit(event) {
     event.preventDefault();
     if (isValid(email)) {
-      alert(`You have successfully subscribed to our newsletter with this email adress: ${email}`);
-    }
-    else {
+      alert(
+        `You have successfully subscribed to our newsletter with this email adress: ${email}`
+      );
+    } else {
       alert("Invalid email adress");
     }
   }
 
-  const regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+  const regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
 
   function isValid(text) {
-    if (regex.test(text))
-      return true;
+    if (regex.test(text)) return true;
     return false;
   }
 
@@ -100,22 +99,20 @@ export default function Footer() {
               pattern="^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$"
               value={email}
             />
-             <input
+            <input
               ref={buttonRef}
               onClick={handleClick}
               type="button"
               value="Subscribe"
               id="subscribe"
             />
-            
+
             {emailError && (
-            <p ref={errorRef} className="errorMail">
-              A valid email would be: example@domain.com
-            </p>
-          )}
+              <p ref={errorRef} className="errorMail">
+                A valid email would be: example@domain.com
+              </p>
+            )}
           </form>
-          </div>
-         
         </div>
 
         <div className="column">
