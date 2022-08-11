@@ -106,6 +106,10 @@ footer a {
   margin: 15px 0;
 }
 
+.errorMail {
+  color: #ca0c0c;
+}
+
 @media only screen and (max-width: 1365px) {
   .newsletter-column {
     order: -1;
