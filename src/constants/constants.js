@@ -167,8 +167,9 @@ export const donuts = {
       id:20,
       picture:kidner,
       description:'Donut with white chocolate icing, dark chocolate curls, Kinder Bueno ™.',
-      name:'kinder-bueno',
-      price:"$2.50"
+      name:'Kinder Bueno',
+      price:"$2.50",
+      htmlRef:'kinder-bueno'
      },
     {
       id: 1,

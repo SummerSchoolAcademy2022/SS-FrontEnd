@@ -14,7 +14,7 @@ const TopSellingDonuts = ()=>{
         <section id="topSelling">
         <div id="donutsTop">
           {donuts.products.map((donut, index) => (
-            <Link to ={`/product/${donut.name}`} className ='links' >
+            <Link to ={`/product/${donut.htmlRef}`} className ='links' >
             <Card
               className="donut"
               key={index}

@@ -11,7 +11,7 @@ const TopSellingGelato = ()=>{
         <h2 id="b">TOP SELLING GELATO</h2>
         <div id="gelatoTop">
           {gelato.products.map((gelato, index) => (
-            <Link to ={`/product/${gelato.name}`} className ='links' >
+            <Link to ={`/product/${gelato.htmlRef}`} className ='links' >
             <Card
               className="gelato"
               key={index}
